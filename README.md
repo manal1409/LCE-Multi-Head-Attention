@@ -42,6 +42,8 @@ Evaluation metrics include accuracy, precision, recall, F1-score, and AUC-ROC. W
     ```bash
     pip install -r requirements.txt
     ```
+If you get error on Pytorch then install this one as well:
+pip install "accelerate>=0.26.0"
 
 4. **Download Word2Vec Model** (if required):
     - Run `model_weights.py` to download and prepare the Google News Word2Vec embeddings.
