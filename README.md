@@ -34,7 +34,9 @@ Evaluation metrics include accuracy, precision, recall, F1-score, and AUC-ROC. W
 
 2. **Install Dependencies**:
     It requires Python 3.10+ and the libraries mentioned in the requirements:
+   
     - scikit-learn
+    - torch torchvision torchaudio
     - gensim
     - transformers
     - datasets
