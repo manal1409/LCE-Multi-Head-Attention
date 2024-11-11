@@ -1,0 +1,4 @@
+scikit-learn
+gensim
+transformers
+datasets
