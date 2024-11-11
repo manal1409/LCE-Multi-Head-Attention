@@ -44,7 +44,7 @@ Evaluation metrics include accuracy, precision, recall, F1-score, and AUC-ROC. W
     ```bash
     pip install -r requirements.txt
     ```
-If you get error on Pytorch then install this one as well:
+If you got error on PyTorch then install this one as well:
 pip install "accelerate>=0.26.0"
 
 4. **Download Word2Vec Model** (if required):
@@ -53,18 +53,18 @@ pip install "accelerate>=0.26.0"
 
 5. **Setup Hugging Face Datasets and Models**:
     - Ensure that the `transformers` and `datasets` libraries are installed.
-    - It will automatically download pre-trained models from Hugging Face the first time each model is used.
+    - It will automatically download pre-trained models from Hugging Face.
 
 ## Python Files and Their Purpose
 
 | File             | Description |
 |------------------|-------------|
-| **main.py**      | Main file to run experiments on QQP and StackExchange datasets. Runs TF-IDF, Word2Vec, Transformer models, and Proposed Model experiments. |
-| **models.py**    | Contained model, TraditionalModels (TF-IDF, Word2Vec), TransformerModel (BERT, RoBERTa, XLNet), and ProposedModel with multi-head attention. Includes fine-tuning and evaluation methods for each model. |
-| **dataset.py**   | Handles dataset loading and preprocessing. Uses Hugging Face `datasets` to load QQP and StackExchange data, creating PyTorch datasets. |
-| **experiments.py** | Functions to run each experiment separately. Calls models from `models.py` and prepares results. |
-| **metrics.py**   | Contains custom evaluation metric functions to calculate accuracy, precision, recall, F1-score, and AUC-ROC. Used with Hugging Face’s `Trainer` to compute metrics after evaluation. |
-| **model_weights.py** | Downloads the Google News Word2Vec embeddings, saves them as `GoogleNews-vectors-negative300.bin`. |
+| **main.py**      | Main file to run experiments on QQP and StackExchange datasets. Runs TF-IDF, Word2Vec, Transformer models and Proposed Model experiments. |
+| **models.py**    | Contained model, TraditionalModels (TF-IDF, Word2Vec), TransformerModel (BERT, RoBERTa, XLNet), and ProposedModel with multi-head attention. Including fine-tuning and evaluation methods for each model. |
+| **dataset.py**   | Handle dataset loading and preprocessing. Use Hugging Face `datasets` to load QQP and StackExchange data, creating PyTorch datasets. |
+| **experiments.py** | Functions to run each experiment separately. Call models from `models.py` and prepares results. |
+| **metrics.py**   | It contain custom evaluation metric functions to calculate accuracy, precision, recall, F1-score, and AUC-ROC. Used with Hugging Face’s `Trainer` to compute metrics after evaluation. |
+| **model_weights.py** | To download the Google News Word2Vec embeddings and saving as `GoogleNews-vectors-negative300.bin`. |
 
 ## Results and Evaluation
 | Model       | Dataset     | Accuracy | Precision | Recall | F1-Score |
