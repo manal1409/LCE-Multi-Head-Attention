@@ -8,7 +8,7 @@
 5. [Results and Evaluation](#results-and-evaluation)
 
 ## Project Overview
-We used in these models:
+We used these models:
 1. **Traditional Models**: TF-IDF with Cosine Similarity, Word2Vec embeddings with Cosine Similarity
 3. **Transformer Models**: BERT, RoBERTa, and XLNet without attention optimization (using pre-trained models from Hugging Face)
 4. **Proposed Model**: Fine-tuned model with multi-head attention, optimized with varying attention head configurations
