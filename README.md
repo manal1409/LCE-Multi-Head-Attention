@@ -4,13 +4,8 @@
 1. [Project Overview](#project-overview)
 2. [Datasets](#datasets)
 3. [Setup and Installation](#setup-and-installation)
-4. [Usage Guide](#usage-guide)
-    - [1. TF-IDF Experiment](#1-tf-idf-experiment)
-    - [2. Word2Vec Experiment](#2-word2vec-experiment)
-    - [3. Transformer-based Model Experiment](#3-transformer-based-model-experiment)
-    - [4. Proposed Model Experiment](#4-proposed-model-experiment)
-5. [Python Files and Their Purpose](#python-files-and-their-purpose)
-6. [Results and Evaluation](#results-and-evaluation)
+4. [Python Files and Their Purpose](#python-files-and-their-purpose)
+5. [Results and Evaluation](#results-and-evaluation)
 
 ## Project Overview
 The models used in this project include:
