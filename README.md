@@ -8,17 +8,17 @@
 5. [Results and Evaluation](#results-and-evaluation)
 
 ## Project Overview
-The models used in this project include:
+We used in these models:
 1. **Traditional Models**: TF-IDF with Cosine Similarity, Word2Vec embeddings with Cosine Similarity
 3. **Transformer Models**: BERT, RoBERTa, and XLNet without attention optimization (using pre-trained models from Hugging Face)
-4. **Proposed Model**: Custom model with multi-head attention, optimized with varying attention head configurations
+4. **Proposed Model**: Fine-tuned model with multi-head attention, optimized with varying attention head configurations
 
-Evaluation metrics include accuracy, precision, recall, F1-score, and AUC-ROC. We conduct experiments on the Quora Question Pairs (QQP) dataset as the primary dataset and optionally test on the StackExchange dataset for cross-domain validation.
+Evaluation metrics include accuracy, precision, recall, F1-score, and AUC-ROC. We conducted experiments on the Quora Question Pairs (QQP) dataset as the primary dataset and tested on the StackExchange dataset for cross-domain validation.
 
 ## Datasets
 ### 1. Quora Question Pairs (QQP)
 - **Description**: QQP consists of about 400,000 question pairs labeled as duplicate or non-duplicate.
-- **Access**: We use the dataset directly from Hugging Face.
+- **Access**: We used the dataset directly from Hugging Face.
 - **Hugging Face Path**: `AlekseyKorshuk/quora-question-pairs`
 
 ### 2. StackExchange Question Pairs
@@ -34,15 +34,20 @@ Evaluation metrics include accuracy, precision, recall, F1-score, and AUC-ROC. W
 
 2. **Install Dependencies**:
     It requires Python 3.10+ and the libraries mentioned in the requirements:
+    - scikit-learn
+    - gensim
+    - transformers
+    - datasets
+
     ```bash
     pip install -r requirements.txt
     ```
 
-3. **Download Word2Vec Model** (if required):
+4. **Download Word2Vec Model** (if required):
     - Run `model_weights.py` to download and prepare the Google News Word2Vec embeddings.
     - This file will download the embeddings file and save it as `GoogleNews-vectors-negative300.bin`.
 
-4. **Setup Hugging Face Datasets and Models**:
+5. **Setup Hugging Face Datasets and Models**:
     - Ensure that the `transformers` and `datasets` libraries are installed.
     - It will automatically download pre-trained models from Hugging Face the first time each model is used.
 
@@ -50,8 +55,8 @@ Evaluation metrics include accuracy, precision, recall, F1-score, and AUC-ROC. W
 
 | File             | Description |
 |------------------|-------------|
-| **main.py**      | Main entry point to run experiments on QQP and StackExchange datasets. Runs TF-IDF, Word2Vec, Transformer models, and Proposed Model experiments. |
-| **models.py**    | Contains model, TraditionalModels (TF-IDF, Word2Vec), TransformerModel (BERT, RoBERTa, XLNet), and ProposedModel with multi-head attention. Includes fine-tuning and evaluation methods for each model. |
+| **main.py**      | Main file to run experiments on QQP and StackExchange datasets. Runs TF-IDF, Word2Vec, Transformer models, and Proposed Model experiments. |
+| **models.py**    | Contained model, TraditionalModels (TF-IDF, Word2Vec), TransformerModel (BERT, RoBERTa, XLNet), and ProposedModel with multi-head attention. Includes fine-tuning and evaluation methods for each model. |
 | **dataset.py**   | Handles dataset loading and preprocessing. Uses Hugging Face `datasets` to load QQP and StackExchange data, creating PyTorch datasets. |
 | **experiments.py** | Functions to run each experiment separately. Calls models from `models.py` and prepares results. |
 | **metrics.py**   | Contains custom evaluation metric functions to calculate accuracy, precision, recall, F1-score, and AUC-ROC. Used with Hugging Face’s `Trainer` to compute metrics after evaluation. |
@@ -65,3 +70,6 @@ Evaluation metrics include accuracy, precision, recall, F1-score, and AUC-ROC. W
 | BERT        | QQP         | 0.00     | 0.00      | 0.00   | 0.00     |
 | RoBERTa     | QQP         | 0.00     | 0.00      | 0.00   | 0.00     |
 | Proposed    | QQP         | 0.00     | 0.00      | 0.00   | 0.00   |
+
+## Author 
+Manal 
